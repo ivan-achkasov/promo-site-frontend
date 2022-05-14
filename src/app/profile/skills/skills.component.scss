@@ -1,0 +1,14 @@
+#skills-section {
+  padding: 50px 0;
+  background-color: #33383dff;
+
+  -webkit-box-shadow: 0 12px 7px -10px #0e0e0e inset;
+  -moz-box-shadow: 0 12px 7px -10px #0e0e0e inset;
+  box-shadow: 0 12px 7px -10px #0e0e0e inset, 0 -12px 7px -10px #0e0e0e inset;
+
+  color: white;
+
+  .progress-bar {
+    background-color: #64f4ac;
+  }
+}
