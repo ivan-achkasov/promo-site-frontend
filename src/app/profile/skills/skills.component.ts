@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
+  javaFrameworksSectionIsOpen: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onJavaFrameworksToggleClick() {
+    this.javaFrameworksSectionIsOpen = !this.javaFrameworksSectionIsOpen
   }
 
 }

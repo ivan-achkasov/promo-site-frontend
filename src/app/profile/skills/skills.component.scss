@@ -1,14 +1,74 @@
+@import "~src/assets/styles/variables";
+@import "~src/assets/styles/mixins";
+
 #skills-section {
   padding: 50px 0;
-  background-color: #33383dff;
+  background-color: $dark-grey;
 
-  -webkit-box-shadow: 0 12px 7px -10px #0e0e0e inset;
-  -moz-box-shadow: 0 12px 7px -10px #0e0e0e inset;
-  box-shadow: 0 12px 7px -10px #0e0e0e inset, 0 -12px 7px -10px #0e0e0e inset;
+  @include box-shadow(0 12px 7px -10px $black inset, 0 -12px 7px -10px $black inset);
 
-  color: white;
+  color: $white;
 
-  .progress-bar {
-    background-color: #64f4ac;
+  .card-title {
+    margin: 10px 20px;
+    color: #55596c;
+  }
+
+  .progress {
+    margin-bottom: 15px;
+  }
+
+  .skills-list {
+    p {
+      font-size: 1.4em;
+
+      &:before {
+        content: '-';
+        padding-right: 3px;
+        font-size: 1.4em;
+        color: $p-green;
+      }
+    }
+  }
+
+  .card {
+    margin-bottom: 10px;
+  }
+
+  .java-frameworks-toggle {
+    .button {
+      text-align: right;
+      padding-right: 20px;
+      color: $p-green;
+      cursor: pointer;
+
+      &:hover  {
+        color: darken($p-green, 25)
+      }
+
+      &:after {
+        padding-left: 7px;
+        content: "˅";
+      }
+
+      &.open:after {
+        content: "˄";
+      }
+    }
+    .line {
+      height: 2px;
+      background-color: $grey;
+    }
+  }
+
+  #java-frameworks-section {
+    margin-top: 30px;
+    overflow: hidden;
+    max-height: 0;
+    @include transition(max-height 0.5s ease-out);
+
+    &.open {
+      max-height: 150px;
+    }
   }
 }

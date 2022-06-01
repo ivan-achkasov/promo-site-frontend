@@ -2,74 +2,170 @@
   <div class="container">
     <div class="h4 text-center mb-4 title">Skills</div>
     <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="progress-container progress-primary">
-            <span class="progress-badge">Java</span>
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                   data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                   style="width: 85%;"></div>
-              <span class="progress-value">85%</span>
+      <div class="card bg-dark">
+        <h5 class="card-title">
+          Backend
+        </h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3">
+              <p>Java Core (4/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p>Kotlin (3/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="col-md-6 java-frameworks-toggle" (click)="onJavaFrameworksToggleClick()">
+                <p class="button" [ngClass]="{ open: javaFrameworksSectionIsOpen }" >java frameworks</p>
+                <p class="line"></p>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="progress-container progress-primary">
-            <span class="progress-badge">Kotlin</span>
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                   data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                   style="width: 60%;"></div>
-              <span class="progress-value">60%</span>
+          <div id="java-frameworks-section" [ngClass]="{ open: javaFrameworksSectionIsOpen }">
+            <div class="row">
+              <div class="col-md-3">
+                <p>Spring-Core</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <p>Spring-Boot</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <p>Spring-Security</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <p>SQL(MySQL, PosgreSQL, Oracle)</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <p>JPA</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <p>Hibernate</p>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 25%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          --------- Build systems
+          <div class="row">
+            <div class="col-md-3">
+              <p>Maven (4/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p>Gradle (1/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 20%"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p>Ant (1/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 20%"></div>
+              </div>
+            </div>
+          </div>
+          <br>
+          --------------
+          <div class="row">
+            <div class="col-md-3">
+              <p>AWS (2/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 40%"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p>Kubernetes/Docker (2/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 40%"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="progress-container progress-primary">
-            <span class="progress-badge">Spring Framework</span>
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                   data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                   style="width: 70%;"></div>
-              <span class="progress-value">70%</span>
+      <div class="card bg-dark">
+        <h5 class="card-title">
+          Frontend
+        </h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3">
+              <p>HTML (4/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%"></div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="progress-container progress-primary">
-            <span class="progress-badge">Angular7</span>
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                   data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                   style="width: 20%;"></div>
-              <span class="progress-value">20%</span>
+            <div class="col-md-3">
+              <p>SCSS/CSS (3/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p>JavaScript (3/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <p>Angular (1/5)</p>
+              <div class="progress">
+                <div class="progress-bar" style="width: 20%"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="progress-container progress-primary">
-            <span class="progress-badge">SQL - MYSQL, PostgreSQL</span>
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                   data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                   style="width: 75%;"></div>
-              <span class="progress-value">75%</span>
+      <div class="card bg-dark">
+        <h5 class="card-title">
+          Project management
+        </h5>
+        <div class="card-body">
+          <div class="row skills-list">
+            <div class="col-md-2">
+              <p>Jira</p>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="progress-container progress-primary">
-            <span class="progress-badge">HTML,CSS,JS</span>
-            <div class="progress">
-              <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                   data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                   style="width: 60%;"></div>
-              <span class="progress-value">60%</span>
+            <div class="col-md-2">
+              <p>Trello</p>
+            </div>
+            <div class="col-md-2">
+              <p>Confluence</p>
+            </div>
+            <div class="col-md-2">
+              <p>SonarQube</p>
+            </div>
+            <div class="col-md-2">
+              <p>SVN/GIT</p>
+            </div>
+            <div class="col-md-2">
+              <p>IntelliJ IDEA/Eclipse</p>
+            </div>
+            <div class="col-md-2">
+              <p>Web-Storm</p>
             </div>
           </div>
         </div>
