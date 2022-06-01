@@ -1,0 +1,15 @@
+@mixin box-shadow($properties...) {
+  $result: ();
+
+  @each $value in $properties {
+    @if $value != null {
+      $result: append($result, $value, "comma");
+    }
+  }
+
+  @if (length($result) > 0) {
+    -webkit-box-shadow: $result;
+    -moz-box-shadow: $result;
+    box-shadow: $result;
+  }
+}
