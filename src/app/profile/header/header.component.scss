@@ -1,18 +1,16 @@
+@import "~src/assets/styles/variables";
+@import "~src/assets/styles/mixins";
+
 header {
   .navbar {
-    -webkit-transition: all .3s ease-in;
-    -moz-transition: all .3s ease-in;
-    -o-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    @include transition(max-height .3s ease-in);
 
     height: 100px;
     max-height: 100px;
   }
   .navbar.scrolled {
-    background-color: #3b3f49;
-    -webkit-box-shadow: 0 8px 4px -2px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 8px 4px -2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 8px 4px -2px rgba(0, 0, 0, 0.2);
+    background-color: $dark-grey;
+    @include box-shadow(0 8px 4px -2px rgba($black, 0.2));
     max-height: 50px;
   }
   a {
