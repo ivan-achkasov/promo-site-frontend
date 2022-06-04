@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    this.scrolled = window.scrollY > 20;
+    this.scrolled = window.scrollY > 300;
   }
 
 }
