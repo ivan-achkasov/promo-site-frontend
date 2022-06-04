@@ -1,7 +1,18 @@
+@import "./variables";
+
+body {
+  color: $green-100;
+  background-color: $grey-800;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $white;
+}
+
 .progress {
   height: 2px;
-  background-color: #3b3f49;
+  background-color: $grey-800;
   .progress-bar {
-    background-color: #64f4ac;
+    background-color: $green-100;
   }
 }

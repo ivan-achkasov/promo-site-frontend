@@ -1,17 +1,13 @@
 @import "~src/assets/styles/variables";
 @import "~src/assets/styles/mixins";
 
-#skills-section {
+#skills {
   padding: 50px 0;
-  background-color: $dark-grey;
 
-  @include box-shadow(0 12px 7px -10px $black inset, 0 -12px 7px -10px $black inset);
-
-  color: $white;
+  //@include box-shadow(0 12px 7px -10px $black inset, 0 -12px 7px -10px $black inset);
 
   .card-title {
     margin: 10px 20px;
-    color: #55596c;
   }
 
   .progress {
@@ -26,7 +22,7 @@
         content: '-';
         padding-right: 3px;
         font-size: 1.4em;
-        color: $p-green;
+        color: $green-100;
       }
     }
   }
@@ -39,11 +35,11 @@
     .button {
       text-align: right;
       padding-right: 20px;
-      color: $p-green;
+      color: $green-100;
       cursor: pointer;
 
       &:hover  {
-        color: darken($p-green, 25)
+        color: darken($green-100, 25)
       }
 
       &:after {
@@ -57,7 +53,7 @@
     }
     .line {
       height: 2px;
-      background-color: $grey;
+      background-color: $grey-700;
     }
   }
 

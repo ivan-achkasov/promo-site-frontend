@@ -1,7 +1,7 @@
 @import "~src/assets/styles/variables";
 
-#intro-section {
-  background-color: $dark-grey;
+#intro {
+  background-color: $grey-800;
   min-height: 100vh;
   color: $white;
 }
@@ -27,7 +27,7 @@
 
   .position {
     color: $black;
-    background-color: $p-green;
+    background-color: $green-100;
     padding: 2px 6px;
     border-radius: 3px;
     font-size: 1.2em;

@@ -1,3 +1,9 @@
-#education-section {
-  background-color: #2d2f33ff;
+@import "~src/assets/styles/variables";
+
+#education {
+  padding: 50px 0;
+
+  .education-row {
+    border-left: $green-100 2px solid;
+  }
 }

@@ -9,20 +9,22 @@ header {
     max-height: 100px;
   }
   .navbar.scrolled {
-    background-color: $dark-grey;
     @include box-shadow(0 8px 4px -2px rgba($black, 0.2));
     max-height: 50px;
   }
+
   a {
-    color: white;
+    color: $white;
   }
+
   .nav-item {
     width: 120px;
     text-align: center;
   }
+
   .nav-link {
     &:hover {
-      color: #64f4ac;
+      color: $green-100;
       &::before {
         content: '<';
       }
