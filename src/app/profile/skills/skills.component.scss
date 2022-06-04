@@ -2,16 +2,67 @@
 @import "~src/assets/styles/mixins";
 
 #skills {
-  padding: 50px 0;
+  padding: 130px 0;
+  min-height: 100vh;
 
   //@include box-shadow(0 12px 7px -10px $black inset, 0 -12px 7px -10px $black inset);
 
-  .card-title {
-    margin: 10px 20px;
+  .title {
+    margin-bottom: 50px;
+    color: $green-100;
   }
 
-  .progress {
-    margin-bottom: 15px;
+  .card {
+    cursor: pointer;
+    background-color: $grey-700;
+
+    &:not(.active) {
+      &:hover {
+        background-color: darken($grey-700, 2);
+      }
+
+      &:active {
+        background-color: darken($grey-700, 4);
+      }
+    }
+
+    &.active {
+      border-bottom: $green-100 2px solid;
+    }
+
+    .card-title {
+      margin: 10px 20px;
+      color: $white;
+    }
+
+    .card-body {
+      color: $grey-600;
+
+      .card-content {
+        margin-bottom: 20px;
+      }
+
+      .card-badges .badge {
+        margin: 0 7px;
+        background-color: $grey-800;
+      }
+    }
+  }
+
+  .skills-description {
+    margin-top: 35px;
+    border-radius: 2px;
+
+    background-color: $grey-700;
+
+    .frame {
+      padding: 20px;
+      display: none;
+
+      &.active {
+        display: initial;
+      }
+    }
   }
 
   .skills-list {
@@ -24,47 +75,6 @@
         font-size: 1.4em;
         color: $green-100;
       }
-    }
-  }
-
-  .card {
-    margin-bottom: 10px;
-  }
-
-  .java-frameworks-toggle {
-    .button {
-      text-align: right;
-      padding-right: 20px;
-      color: $green-100;
-      cursor: pointer;
-
-      &:hover  {
-        color: darken($green-100, 25)
-      }
-
-      &:after {
-        padding-left: 7px;
-        content: "˅";
-      }
-
-      &.open:after {
-        content: "˄";
-      }
-    }
-    .line {
-      height: 2px;
-      background-color: $grey-700;
-    }
-  }
-
-  #java-frameworks-section {
-    margin-top: 30px;
-    overflow: hidden;
-    max-height: 0;
-    @include transition(max-height 0.5s ease-out);
-
-    &.open {
-      max-height: 150px;
     }
   }
 }

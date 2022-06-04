@@ -1,172 +1,206 @@
 <div id="skills">
   <div class="container">
-    <div class="h4 text-center mb-4 title">Skills</div>
-    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-      <div class="card bg-dark">
-        <h5 class="card-title">
-          Backend
-        </h5>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-3">
-              <p>Java Core (4/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <p>Kotlin (3/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="col-md-6 java-frameworks-toggle" (click)="onJavaFrameworksToggleClick()">
-                <p class="button" [ngClass]="{ open: javaFrameworksSectionIsOpen }" >java frameworks</p>
-                <p class="line"></p>
-            </div>
+
+
+    <div class="h4 title">My skills</div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" [ngClass]="{active : backendFrameActive}" (click)="cardClicked('backend')">
+          <div class="card-title">
+            Backend
           </div>
-          <div id="java-frameworks-section" [ngClass]="{ open: javaFrameworksSectionIsOpen }">
-            <div class="row">
-              <div class="col-md-3">
-                <p>Spring-Core</p>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 25%"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <p>Spring-Boot</p>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 25%"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <p>Spring-Security</p>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 25%"></div>
-                </div>
-              </div>
+          <div class="card-body">
+            <div class="card-content">
+              AWd kefnsnekj n en knfej nfsn efjn enf snef nesnf sne nfse fs nse nsen ksn nfs enfn skn fksnef
             </div>
-            <div class="row">
-              <div class="col-md-3">
-                <p>SQL(MySQL, PosgreSQL, Oracle)</p>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 25%"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <p>JPA</p>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 25%"></div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <p>Hibernate</p>
-                <div class="progress">
-                  <div class="progress-bar" style="width: 25%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <br>
-          --------- Build systems
-          <div class="row">
-            <div class="col-md-3">
-              <p>Maven (4/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 80%"></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <p>Gradle (1/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 20%"></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <p>Ant (1/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 20%"></div>
-              </div>
-            </div>
-          </div>
-          <br>
-          --------------
-          <div class="row">
-            <div class="col-md-3">
-              <p>AWS (2/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 40%"></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <p>Kubernetes/Docker (2/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 40%"></div>
-              </div>
+            <div class="card-badges">
+              <p class="badge">Java</p>
+              <p class="badge">Kotlin</p>
+              <p class="badge">Python</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="card bg-dark">
-        <h5 class="card-title">
-          Frontend
-        </h5>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-3">
-              <p>HTML (4/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 80%"></div>
-              </div>
+      <div class="col-md-4">
+        <div class="card" [ngClass]="{active : frontendFrameActive}" (click)="cardClicked('frontend')">
+          <div class="card-title">
+            Frontend
+          </div>
+          <div class="card-body">
+            <div class="card-content">
+              AWd kefnsnekj n en knfej nfsn efjn enf snef nesnf sne nfse fs nse nsen ksn nfs enfn skn fksnef
             </div>
-            <div class="col-md-3">
-              <p>SCSS/CSS (3/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <p>JavaScript (3/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 60%"></div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <p>Angular (1/5)</p>
-              <div class="progress">
-                <div class="progress-bar" style="width: 20%"></div>
-              </div>
+            <div class="card-badges">
+              <p class="badge">HTML</p>
+              <p class="badge">CSS/SCSS</p>
+              <p class="badge">Angular</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="card bg-dark">
-        <h5 class="card-title">
-          Project management
-        </h5>
-        <div class="card-body">
-          <div class="row skills-list">
-            <div class="col-md-2">
-              <p>Jira</p>
+      <div class="col-md-4">
+        <div class="card" [ngClass]="{active : toolsFrameActive}" (click)="cardClicked('tools')">
+          <div class="card-title">
+            Tools
+          </div>
+          <div class="card-body">
+            <div class="card-content">
+              AWd kefnsnekj n en knfej nfsn efjn enf snef nesnf sne nfse fs nse nsen ksn nfs enfn skn fksnef
             </div>
-            <div class="col-md-2">
-              <p>Trello</p>
+            <div class="card-badges">
+              <p class="badge">VCS</p>
+              <p class="badge">IDE</p>
             </div>
-            <div class="col-md-2">
-              <p>Confluence</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-description container">
+      <div class="frame" [ngClass]="{active : backendFrameActive}">
+        <div class="row">
+          <div class="col-md-3">
+            <p>Java Core (4/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
             </div>
-            <div class="col-md-2">
-              <p>SonarQube</p>
+          </div>
+          <div class="col-md-3">
+            <p>Kotlin (3/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 60%"></div>
             </div>
-            <div class="col-md-2">
-              <p>SVN/GIT</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <p>Spring-Core</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 25%"></div>
             </div>
-            <div class="col-md-2">
-              <p>IntelliJ IDEA/Eclipse</p>
+          </div>
+          <div class="col-md-3">
+            <p>Spring-Boot</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 25%"></div>
             </div>
-            <div class="col-md-2">
-              <p>Web-Storm</p>
+          </div>
+          <div class="col-md-3">
+            <p>Spring-Security</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 25%"></div>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <p>SQL(MySQL, PosgreSQL, Oracle)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>JPA</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>Hibernate</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 25%"></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        --------- Build systems
+        <div class="row">
+          <div class="col-md-3">
+            <p>Maven (4/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>Gradle (1/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 20%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>Ant (1/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        --------------
+        <div class="row">
+          <div class="col-md-3">
+            <p>AWS (2/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 40%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>Kubernetes/Docker (2/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 40%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame" [ngClass]="{active : frontendFrameActive}">
+        <div class="row">
+          <div class="col-md-3">
+            <p>HTML (4/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>SCSS/CSS (3/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>JavaScript (3/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>Angular (1/5)</p>
+            <div class="progress">
+              <div class="progress-bar" style="width: 20%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame" [ngClass]="{active : toolsFrameActive}">
+        <div class="row skills-list">
+          <div class="col-md-2">
+            <p>Jira</p>
+          </div>
+          <div class="col-md-2">
+            <p>Trello</p>
+          </div>
+          <div class="col-md-2">
+            <p>Confluence</p>
+          </div>
+          <div class="col-md-2">
+            <p>SonarQube</p>
+          </div>
+          <div class="col-md-2">
+            <p>SVN/GIT</p>
+          </div>
+          <div class="col-md-2">
+            <p>IntelliJ IDEA/Eclipse</p>
+          </div>
+          <div class="col-md-2">
+            <p>Web-Storm</p>
           </div>
         </div>
       </div>

@@ -7,15 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  javaFrameworksSectionIsOpen: boolean = false
+  backendFrameActive: boolean = true
+  frontendFrameActive: boolean = false
+  toolsFrameActive: boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onJavaFrameworksToggleClick() {
-    this.javaFrameworksSectionIsOpen = !this.javaFrameworksSectionIsOpen
-  }
+   cardClicked(type: string): void {
+      if(type == "backend") {
+        this.backendFrameActive = true
+        this.frontendFrameActive = false
+        this.toolsFrameActive = false
+      } else if (type == "frontend") {
+        this.backendFrameActive = false
+        this.frontendFrameActive = true
+        this.toolsFrameActive = false
+      } else if (type == "tools") {
+        this.backendFrameActive = false
+        this.frontendFrameActive = false
+        this.toolsFrameActive = true
+      }
+   }
 
 }
