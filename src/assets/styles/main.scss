@@ -1,8 +1,30 @@
 @import "./variables";
 
+@font-face {
+  font-family: "Roboto";
+  font-weight: normal;
+  src: local("Roboto"), url(~src/assets/fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: bold;
+  src: local("Roboto-Bold"), url(~src/assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 1 399;
+  font-style: italic;
+  src: local("Roboto-Bold"), url(~src/assets/fonts/Roboto/Roboto-ThinItalic.ttf) format("truetype");
+}
+
 body {
-  color: $green-100;
+  color: $white;
   background-color: $grey-800;
+
+  font-family: 'Roboto', monospace;
+  font-style: normal;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -16,4 +38,8 @@ h1,h2,h3,h4,h5,h6 {
   .progress-bar {
     background-color: $green-100;
   }
+}
+
+.temporary-hide {
+  display: none;
 }
