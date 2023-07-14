@@ -2,4 +2,10 @@
 
 #experience {
   padding: 50px 0;
+
+  .item {
+    border-left: $green-100 solid 1px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+  }
 }
